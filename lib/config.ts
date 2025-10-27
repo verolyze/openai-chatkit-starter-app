@@ -5,32 +5,27 @@ export const WORKFLOW_ID =
 
 export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
-// 🔹 Prompts iniciales
+// Prompts iniciales (SIN icon)
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "🔍 Diagnóstico de falla",
+    label: "Diagnóstico de falla",
     prompt: "Dame el diagnóstico de la falla 203",
-    icon: "stethoscope",
   },
   {
-    label: "⚙️ Procedimiento técnico",
+    label: "Procedimiento técnico",
     prompt: "Dame el procedimiento de cambio del ventilador del generador",
-    icon: "wrench",
   },
   {
-    label: "📊 Estado de la flota",
+    label: "Estado de la flota",
     prompt: "Muéstrame el estado general de la flota.",
-    icon: "activity",
   },
   {
-    label: "🏆 Top 3 con mayor riesgo",
+    label: "Top 3 con mayor riesgo",
     prompt: "Dame el Top 3 de máquinas con mayor riesgo.",
-    icon: "trophy",
   },
   {
-    label: "🛠️ Incidencias WP01",
+    label: "Incidencias WP01",
     prompt: "¿Qué incidencias tiene la máquina WP01?",
-    icon: "alert-triangle",
   },
 ];
 
@@ -38,7 +33,7 @@ export const PLACEHOLDER_INPUT =
   "Escribe tu consulta (ej. Top 3 con mayor riesgo)...";
 export const GREETING = "Hola, ¿en qué puedo ayudarte hoy?";
 
-// 🎨 Tema visual
+// Tema visual (azul marino + dorado)
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
     grayscale: {
@@ -47,11 +42,11 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
       shade: theme === "dark" ? -2 : -4,
     },
     accent: {
-      primary: "#EFAC18", // Dorado
+      primary: "#EFAC18",
       level: 1,
     },
     surface: {
-      base: theme === "dark" ? "#001B3D" : "#FFFFFF", // Azul marino o blanco
+      base: theme === "dark" ? "#001B3D" : "#FFFFFF",
       inverted: theme === "dark" ? "#F9FAFB" : "#001B3D",
     },
   },
@@ -64,15 +59,10 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   },
   custom: {
     chatBubble: {
-      user: {
-        background: "#EFAC18", // Dorado
-        color: "#001B3D", // Azul marino
-      },
-      assistant: {
-        background: "#002B66", // Azul profundo
-        color: "#FFFFFF", // Texto blanco
-      },
+      user: { background: "#EFAC18", color: "#001B3D" },
+      assistant: { background: "#002B66", color: "#FFFFFF" },
     },
   },
 });
+
 
