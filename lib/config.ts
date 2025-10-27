@@ -5,7 +5,7 @@ export const WORKFLOW_ID =
 
 export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
-// Prompts iniciales con íconos válidos
+// Prompts iniciales (sin emojis si prefieres, y con íconos válidos)
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   { label: "Diagnóstico de falla", prompt: "Dame el diagnóstico de la falla 203", icon: "bug" },
   { label: "Procedimiento técnico", prompt: "Dame el procedimiento de cambio del ventilador del generador", icon: "settings-slider" },
@@ -19,7 +19,7 @@ export const PLACEHOLDER_INPUT =
 
 export const GREETING = "Hola, ¿en qué puedo ayudarte hoy?";
 
-// Tema visual (sin surface.* para respetar el tipo)
+// Tema visual (SOLO keys soportadas por ThemeOption: sin surface.*)
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
     grayscale: { hue: 220, tint: 6, shade: theme === "dark" ? -2 : -4 },
@@ -29,7 +29,8 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   density: "comfortable",
   typography: {
     baseSize: 16,
-    fontFamily: 'Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+    fontFamily:
+      'Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
   },
   custom: {
     chatBubble: {
@@ -38,3 +39,4 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
     },
   },
 });
+
