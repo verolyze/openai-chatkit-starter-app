@@ -5,17 +5,19 @@ export const WORKFLOW_ID =
 
 export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
+// Prompts iniciales (sin iconos para evitar errores de tipo)
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
-  {
-    label: "What can you do?",
-    prompt: "What can you do?",
-    icon: "circle-question",
-  },
+  { label: "Diagnóstico de falla", prompt: "Dame el diagnóstico de la falla 203" },
+  { label: "Procedimiento técnico", prompt: "Dame el procedimiento de cambio del ventilador del generador" },
+  { label: "Estado de la flota", prompt: "Muéstrame el estado general de la flota." },
+  { label: "Top 3 con mayor riesgo", prompt: "Dame el Top 3 de máquinas con mayor riesgo." },
+  { label: "Incidencias WP01", prompt: "¿Qué incidencias tiene la máquina WP01?" },
 ];
 
-export const PLACEHOLDER_INPUT = "Ask anything...";
+export const PLACEHOLDER_INPUT =
+  "Escribe tu consulta (ej. Top 3 con mayor riesgo)...";
 
-export const GREETING = "How can I help you today?";
+export const GREETING = "Hola, ¿en qué puedo ayudarte hoy?";
 
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
@@ -25,10 +27,13 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
       shade: theme === "dark" ? -1 : -4,
     },
     accent: {
-      primary: theme === "dark" ? "#f1f5f9" : "#0f172a",
+      // Dorado como color de acento, válido
+      primary: "#EFAC18",
       level: 1,
     },
   },
   radius: "round",
-  // chatkit.studio/playground to explore config options
+  // Opcionales válidos: "compact" | "normal" | "spacious"
+  density: "normal",
+  typography: { baseSize: 16 },
 });
