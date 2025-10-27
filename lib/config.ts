@@ -10,7 +10,7 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
     label: "Diagnóstico de falla",
     prompt: "Dame el diagnóstico de la falla 203",
-    icon: "bug",
+    icon: "circle-question",
   },
   {
     label: "Procedimiento técnico",
