@@ -279,7 +279,8 @@ export function ChatKitPanel({
       },
     },
     threadItemActions: {
-      feedback: false,
+      feedback: true,
+      retry: true
     },
     onClientTool: async (invocation: {
       name: string;
