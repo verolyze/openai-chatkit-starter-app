@@ -9,27 +9,27 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
     label: "Diagnóstico de falla",
-    prompt: "Dame el diagnóstico de la falla 203",
+    prompt: "Analiza la falla 203 y dame un diagnóstico detallado con posibles causas y acciones recomendadas.",
     icon: "circle-question",
   },
   {
     label: "Procedimiento técnico",
-    prompt: "Dame el procedimiento de cambio del ventilador del generador",
+    prompt: "Muéstrame el procedimiento completo para el cambio del ventilador del generador, incluyendo herramientas necesarias y precauciones.",
     icon: "settings-slider",
   },
   {
     label: "Estado de la flota",
-    prompt: "Muéstrame el estado general de la flota.",
+    prompt: "Resúmeme el estado actual de la flota, indicando qué máquinas presentan mayor criticidad o alertas activas.",
     icon: "analytics",
   },
   {
     label: "Top 3 con mayor riesgo",
-    prompt: "Dame el Top 3 de máquinas con mayor riesgo.",
+    prompt: "Identifica las tres máquinas con mayor nivel de riesgo operativo y explica brevemente por qué.",
     icon: "chart",
   },
   {
     label: "Incidencias WP01",
-    prompt: "¿Qué incidencias tiene la máquina WP01?",
+    prompt: "Muéstrame las incidencias registradas en la máquina WP01, indicando fecha, tipo y estado actual.",
     icon: "info",
   },
 ];
