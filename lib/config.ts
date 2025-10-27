@@ -5,13 +5,33 @@ export const WORKFLOW_ID =
 
 export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
-// Prompts iniciales (sin iconos para evitar errores de tipo)
+// Prompts iniciales con íconos válidos según ChatKit
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
-  { label: "Diagnóstico de falla", prompt: "Dame el diagnóstico de la falla 203" },
-  { label: "Procedimiento técnico", prompt: "Dame el procedimiento de cambio del ventilador del generador" },
-  { label: "Estado de la flota", prompt: "Muéstrame el estado general de la flota." },
-  { label: "Top 3 con mayor riesgo", prompt: "Dame el Top 3 de máquinas con mayor riesgo." },
-  { label: "Incidencias WP01", prompt: "¿Qué incidencias tiene la máquina WP01?" },
+  {
+    label: "Diagnóstico de falla",
+    prompt: "Dame el diagnóstico de la falla 203",
+    icon: "bug",
+  },
+  {
+    label: "Procedimiento técnico",
+    prompt: "Dame el procedimiento de cambio del ventilador del generador",
+    icon: "settings-slider",
+  },
+  {
+    label: "Estado de la flota",
+    prompt: "Muéstrame el estado general de la flota.",
+    icon: "analytics",
+  },
+  {
+    label: "Top 3 con mayor riesgo",
+    prompt: "Dame el Top 3 de máquinas con mayor riesgo.",
+    icon: "chart",
+  },
+  {
+    label: "Incidencias WP01",
+    prompt: "¿Qué incidencias tiene la máquina WP01?",
+    icon: "info",
+  },
 ];
 
 export const PLACEHOLDER_INPUT =
@@ -27,13 +47,15 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
       shade: theme === "dark" ? -1 : -4,
     },
     accent: {
-      // Dorado como color de acento, válido
-      primary: "#EFAC18",
+      primary: "#EFAC18", // Dorado
       level: 1,
     },
   },
   radius: "round",
-  // Opcionales válidos: "compact" | "normal" | "spacious"
-  density: "normal",
-  typography: { baseSize: 16 },
+  density: "normal", // ✅ valores válidos: compact | normal | spacious
+  typography: {
+    baseSize: 16,
+    fontFamily: 'Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+  },
 });
+
