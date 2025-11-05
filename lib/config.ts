@@ -9,27 +9,27 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
     label: "Diagnóstico de falla",
-    prompt: "Analiza la falla 203 y dame un diagnóstico detallado con posibles causas y acciones recomendadas.",
+    prompt: "Tengo una alta temperatura en el cuerpo de anillos del generador. Dame un detalle de las recomendaciones a realizar y un checklist de revisión para mi técnico.",
     icon: "circle-question",
   },
   {
-    label: "Procedimiento técnico",
-    prompt: "Muéstrame el procedimiento completo para el cambio del ventilador del generador, incluyendo herramientas necesarias y precauciones.",
+    label: "Predicción de viento",
+    prompt: "Dame la predicción de viento para Cerro de Hula correspondiente al día de mañana.",
     icon: "settings-slider",
   },
   {
-    label: "Estado de la flota",
-    prompt: "Resúmeme el estado actual de la flota, indicando qué máquinas presentan mayor criticidad o alertas activas.",
+    label: "Generación vs Presupuesto",
+    prompt: "Muéstrame la generación YTD de Altamira y compárala contra el presupuesto para el mismo período",
     icon: "analytics",
   },
   {
     label: "Top 3 con mayor riesgo",
-    prompt: "Identifica las tres máquinas con mayor nivel de riesgo operativo y explica brevemente por qué.",
+    prompt: "Dame el top 3 de maquinas en cerro de hula y un resumen de cada una",
     icon: "chart",
   },
   {
-    label: "Incidencias WP01",
-    prompt: "Muéstrame las incidencias registradas en la máquina WP01, indicando fecha, tipo y estado actual.",
+    label: "Incidencias ORO23",
+    prompt: "Muéstrame todas las incidencias registradas en la máquina ORO23",
     icon: "info",
   },
 ];
